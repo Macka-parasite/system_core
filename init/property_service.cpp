@@ -942,8 +942,8 @@ static void workaround_snet_properties() {
         PropertySetNoSocket(snet_prop_key[i], snet_prop_value[i], &error);
     }
 
-    if (stoi(android::base::GetProperty("ro.product.first_api_level", "")) > 32) {
-        PropertySetNoSocket("ro.product.first_api_level", "32", &error);
+    if (stoi(android::base::GetProperty("ro.product.first_api_level", "")) > 24) {
+        PropertySetNoSocket("ro.product.first_api_level", "24", &error);
     }
 
     // Extra pops
